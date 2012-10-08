@@ -13,7 +13,6 @@ class Generate
     @tasks = symbolize_keys!(yml_contents["tasks"] || {})
     raise "No tasks detected..." unless @tasks
     @app = yml_contents["terminal"] || 'iTerm'
-    puts "No terminal defined... Defaulting to \"iTerm\"" unless @app
   end
   
   def generate_tabs    
