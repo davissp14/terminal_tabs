@@ -25,7 +25,7 @@ class Generate
     str
   end
 
-  def generate_script
+  def generate_autorun
     File.open('./autorun.sh', 'w') do |file|
       file.write(
         %Q[osascript <<-eof
