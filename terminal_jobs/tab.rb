@@ -1,32 +1,26 @@
 class Tab
-    attr_reader :job, :cmd, :name, :directive
+    attr_reader :task, :name, :directive
     
-    def initialize(job={})
-      @job = job
-      @cmd = command
-      @name = job_name.to_s
-      @directive = job_directive
+    def initialize(task={})
+      @task = task
+      @name = task_name.to_s
+      @directive = task_directive
     end
 
     def generate_tab
       <<-eof
         launch session "Default Session"
         tell the current session
-          write text "#{@cmd} #{@directive}"
+          write text "#{@directive}"
         end tell
       eof
     end
 
-    def command
-      match = job_directive.match(/\.(.*)/)
-      match ? match[1] : ''
+    def task_name
+      @task.keys.first
     end
 
-    def job_name
-      @job.keys.first
-    end
-
-    def job_directive
-      @job[job_name].to_s
+    def task_directive
+      @task[task_name].to_s
     end
 end

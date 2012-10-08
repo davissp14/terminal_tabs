@@ -1,25 +1,25 @@
 class Generate
-  attr_reader :autos
+  attr_reader :app, :tasks
 
   def initialize
-    @cmds = {}
-    @terminal = ''
+    @tasks = {}
+    @app = ''
     load_yml
   end
 
   def load_yml    
     yml_contents = YAML.load_file("./tasks.yml")
     raise "No tasks.yml file detected" unless yml_contents
-    @cmds = symbolize_keys!(yml_contents["tasks"] || {})
-    raise "No tasks detected..." unless @cmds
-    @terminal = yml_contents["terminal"] || 'iTerm'
-    puts "No terminal defined... Defaulting to \"iTerm\"" unless @terminal
+    @tasks = symbolize_keys!(yml_contents["tasks"] || {})
+    raise "No tasks detected..." unless @tasks
+    @app = yml_contents["terminal"] || 'iTerm'
+    puts "No terminal defined... Defaulting to \"iTerm\"" unless @app
   end
   
   def generate_tabs    
     str = ''
-    @cmds.each do |cmd|
-      tab = Tab.new(Hash[*cmd])
+    @tasks.each do |task|
+      tab = Tab.new(Hash[*task])
       str << tab.generate_tab
     end
     str
@@ -29,14 +29,14 @@ class Generate
     File.open('./autorun.sh', 'w') do |file|
       file.write(
         %Q[osascript <<-eof
-           tell application "#{@terminal}"
+           tell application "#{@app}"
         	   -- make new terminal
         	   tell the front terminal
       	  	   activate current session
                #{generate_tabs}
              end tell
            end tell
-           tell application "#{@terminal}"
+           tell application "#{@app}"
              activate
            end tell
       eof]
