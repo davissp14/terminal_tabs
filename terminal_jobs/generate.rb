@@ -8,10 +8,10 @@ class Generate
   end
 
   def load_yml    
-    yml_contents = YAML.load_file("./autoload.yml")
-    raise "No autoload.yml file detected" unless yml_contents
-    @cmds = symbolize_keys!(yml_contents["autoloads"] || {})
-    raise "No autoloads detected..." unless @cmds
+    yml_contents = YAML.load_file("./tasks.yml")
+    raise "No tasks.yml file detected" unless yml_contents
+    @cmds = symbolize_keys!(yml_contents["tasks"] || {})
+    raise "No tasks detected..." unless @cmds
     @terminal = yml_contents["terminal"] || 'iTerm'
     puts "No terminal defined... Defaulting to \"iTerm\"" unless @terminal
   end

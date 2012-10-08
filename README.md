@@ -3,7 +3,7 @@ terminal_jobs
 
 Specify what you want to run in your terminal tabs, and this script will build your workstation for you.
 
-== autoload.yml ==
+== tasks.yml ==
  
  Set type of terminal ( Defaults to iTerm ) 
 
