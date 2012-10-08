@@ -1,6 +1,0 @@
-terminal: iTerm       # Specify terminal type.  Has been tested with Terminal / iTerm
-
-# Autoloads are where you place the scripts you want to separate tabs.
-autoloads:
-#  mysql: "/usr/local/bin/mysql"
-#  rails_server: "cd /Users/user/Programming/rails_project/ && rails s"
