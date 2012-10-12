@@ -6,7 +6,7 @@ Specify what you want to run in your terminal tabs, and this script will build y
 
 ## tasks.yml
 
- Create a task to be opened and executed in a new terminal tab.
+ Specify tasks to be opened and executed in a separate terminal tabs.
   
    Examples:
 
@@ -16,7 +16,7 @@ Specify what you want to run in your terminal tabs, and this script will build y
      
 
 
-  To generate the executable to run your tasks simply run:
+  To generate an executable to run your tasks simply run:
 
    `ruby terminal_jobs.rb`
 
