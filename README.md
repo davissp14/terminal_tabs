@@ -1,12 +1,12 @@
 # Terminal Tasks
 
-Specify what you want to run in your terminal tabs, and this script will build your workstation for you.
+Specify what you want to run in your terminal tabs and this script will build your workstation for you.
 
 *** Currently only compatible with Iterm.
 
 ## tasks.yml
 
- Specify tasks to be opened and executed in a separate terminal tabs.
+ Specify tasks to be opened and executed in separate terminal tabs.
   
    Examples:
 
@@ -20,12 +20,10 @@ Specify what you want to run in your terminal tabs, and this script will build y
 
    `ruby terminal_jobs.rb`
 
-  A autorun.sh file will be generated and can be moved anywhere you like.
-
 
 ## Recommendation:
    
-     Move the autorun.sh file to a fixed directory, and create an alias to run that script.
+     Move the generated file to a fixed directory and create an alias to execute the file.
 
      Steps on creating an alias:
 
