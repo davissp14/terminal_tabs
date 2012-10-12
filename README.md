@@ -9,6 +9,7 @@ Specify what you want to run in your terminal tabs, and this script will build y
  Create a task to be opened and executed in a new terminal tab.
   
    Examples:
+
       `mysql: "/usr/local/bin/mysql"`
 
       `rails_server: "cd /Users/user/Programming/rails_project/ && rails s"`
