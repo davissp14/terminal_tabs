@@ -10,15 +10,15 @@ Specify what you want to run in your terminal tabs and this script will build yo
   
    Examples:
 
-      `mysql: "/usr/local/bin/mysql"`
+      mysql: "/usr/local/bin/mysql"
 
-      `rails_server: "cd /Users/user/Programming/rails_project/ && rails s"`
+      rails_server: "cd /Users/user/Programming/rails_project/ && rails s"
      
 
 
   To generate an executable to run your tasks simply run:
 
-   `ruby terminal_jobs.rb`
+   `ruby terminal_tasks.rb`
 
 
 ## Recommendation:
