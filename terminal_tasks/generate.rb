@@ -29,16 +29,15 @@ class Generate
       file.write(
         %Q[osascript <<-eof
            tell application "#{@app}"
-        	   -- make new terminal
-        	   tell the front terminal
-      	  	   activate current session
+             activate
+        	 -- make new terminal
+        	 set myterm to (current terminal)
+             -- tell the terminal to do something
+             tell myterm
                #{generate_tabs}
              end tell
            end tell
-           tell application "#{@app}"
-             activate
-           end tell
-      eof]
+        eof]
       )
      file.chmod(0755)
     end
@@ -50,5 +49,4 @@ class Generate
     raise "Not a hash!" unless hash.is_a?(Hash)
     hash.inject({}){|mkey,(k,v)| mkey[k.to_sym] = v; mkey}
   end
-  
 end
