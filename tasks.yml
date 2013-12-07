@@ -1,7 +1,9 @@
-terminal: iTerm       # Specify terminal type.  Currently only compatable with iTerm.
+# Example
+#
+#terminal: iTerm       # Specify terminal type.  Currently only compatable with iTerm.
+#
+#tasks:
+#  redis: "redis-cli"
+#  mongo: "mongo"
+#  mongo_logs: "tail -f /usr/bin/path/instance.log" 
 
-# Autoload tasks by placing the name and (path / cmd ) of the task you want included.
-tasks:
-  tail: "cd /Users/shaun/Programming/mongohq/tail && npm start"
-  api: "cd /Users/shaun/Programming/mongohq/api && bundle exec rackup config.ru"
-  vagrant: "cd /Users/shaun/Programming/mongohq/vagrant-dblayer && vagrant up"
