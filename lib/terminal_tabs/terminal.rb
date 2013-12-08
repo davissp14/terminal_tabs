@@ -1,13 +1,13 @@
 class Terminal
-  attr_accessor :type, :tasks
+  attr_accessor :type, :tabs
 
   def initialize
     load_yml
 
   rescue NoTasksDetected
-    $stderr.puts("No tasks.yml file detected")
+    $stderr.puts("No tabs.yml file detected")
   rescue TasksFileNotFound
-    $stderr.puts("No tasks detected...")
+    $stderr.puts("No tabs detected...")
   rescue
     $stderr.puts($!)
   end
@@ -33,8 +33,8 @@ class Terminal
   
   def generate_tabs
     source = ''
-    self.tasks.each do |task|
-      tab = Tab.new(Hash[*task])
+    self.tabs.each do |tab|
+      tab = Tab.new(Hash[*tab])
       puts "Generating #{tab.name}"
       source << tab.build
     end
@@ -47,8 +47,8 @@ class Terminal
   def load_yml
     yml_contents = YAML.load_file(TASKS_PATH)
     raise TasksFileNotFound unless yml_contents
-    self.tasks = symbolize_keys!(yml_contents["tasks"] || {})
-    raise NoTasksDetected unless self.tasks
+    self.tabs = symbolize_keys!(yml_contents["tabs"] || {})
+    raise NoTasksDetected unless self.tabs
     self.type = yml_contents["terminal"] || 'iTerm'
   end
   

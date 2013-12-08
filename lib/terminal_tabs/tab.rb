@@ -1,10 +1,10 @@
 class Tab
-    attr_accessor :task, :name, :directive
+    attr_accessor :tab, :name, :directive
     
-    def initialize(task={})
-      self.task = task
-      self.name = task_name.to_s
-      self.directive = task_directive
+    def initialize(tab={})
+      self.tab = tab
+      self.name = tab_name.to_s
+      self.directive = tab_directive
     end
 
     def build
@@ -23,11 +23,11 @@ class Tab
 
     private
 
-    def task_name
-      @task.keys.first
+    def tab_name
+      self.tab.keys.first
     end
 
-    def task_directive
-      @task[task_name]
+    def tab_directive
+      self.tab[tab_name]
     end
 end

@@ -1,13 +1,13 @@
-# Terminal Tasks
+# Terminal Tabs
 
-Terminal tasks makes it super easy to quickly build out your terminal workstation.
+Terminal tabs makes it super easy to quickly build out your terminal workstation.
 
 
 # Getting started
 
-      1. git clone git@github.com:davissp14/terminal_tasks.git
+      1. git clone git@github.com:davissp14/terminal_tabs.git
       
-      2. Use the tasks.yml file to specify your desired tasks  
+      2. Use the tabs.yml file to specify your desired tasks
 
       3. ruby bin/generate_excutable.rb
 
@@ -16,9 +16,9 @@ Terminal tasks makes it super easy to quickly build out your terminal workstatio
 
 
 
-## tasks.yml
+## tabs.yml
 
-Specify your tasks in the following format:
+Specify your tabs in the following format:
   
    Examples:
 

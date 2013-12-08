@@ -1,9 +1,0 @@
-# Example
-#
-#terminal: iTerm       # Specify terminal type.  Currently only compatable with iTerm.
-#
-#tasks:
-#  redis: "redis-cli"
-#  mongo: "mongo"
-#  mongo_logs: "tail -f /usr/bin/path/instance.log" 
-
