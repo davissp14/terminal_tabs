@@ -3,11 +3,15 @@
 Terminal tabs makes it super easy to quickly build out your terminal workstation.
 
 
-# Getting started
+## Supported Terminals ##
+Currently the only supported terminal is Iterm2.  
+
+
+## Getting started
 
       1. git clone git@github.com:davissp14/terminal_tabs.git
       
-      2. Use the tabs.yml file to specify your desired tasks
+      2. Use the tabs.yml file to specify your desired tab name and command
 
       3. ruby bin/generate_excutable.rb
 
