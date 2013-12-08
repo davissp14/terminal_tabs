@@ -6,7 +6,7 @@ class Terminal
     self.tabs = []
   end
 
-  def build_file
+  def build_executable
     File.open(OUTPUT_TO, 'w') do |file|
       file.write(
         %Q[osascript <<-eof
@@ -36,7 +36,7 @@ class Terminal
     source
   end
 
-  def load_yml
+  def load_tabs
     if File.exists?(TABS_PATH)
       yml_contents = YAML.load_file(TABS_PATH)
       self.tabs = symbolize_keys!(yml_contents["tabs"] || {})
