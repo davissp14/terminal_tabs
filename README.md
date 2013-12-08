@@ -11,7 +11,7 @@ Currently the only supported terminal is Iterm2.
 
       1. git clone git@github.com:davissp14/terminal_tabs.git
       
-      2. Use the tabs.yml file to specify your desired tab name and command
+      2. Use the tabs.yml file to specify your desired tab name and command to execute
 
       3. ruby bin/generate_excutable.rb
 
