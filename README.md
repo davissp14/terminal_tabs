@@ -14,8 +14,8 @@ Terminal tabs makes it super easy to quickly build out your terminal workstation
         
         tabs: 
           rails_project:  # Name of executable 
-            rails_logs: "tail -f /Users/user/Programming/rails_project/log/development.log"  # Format (tab_name: cmd)
-            rails_server: "cd /Users/user/Programming/rails_project/ && rails s"             # Format (tab_name: cmd)
+            rails_logs: "tail -f /Programming/rails_project/log/development.log"  # Format (tab_name: cmd)
+            rails_server: "cd /Programming/rails_project/ && rails s"  # Format (tab_name: cmd)
  
  Generate an executable thats capable of building out your workstation.
           
