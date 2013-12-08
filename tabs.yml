@@ -1,7 +1,7 @@
 terminal: iTerm       # Specify terminal type.  Currently only compatable with iTerm.
 
-# Autoload tasks by placing the name and (path / cmd ) of the task you want included.
+# Specify your tabs below.
 tabs:
-#  tail: "cd /Users/shaun/Programming/tail && npm start"
-#  api: "cd /Users/shaun/Programming//api && bundle exec rackup config.ru"
-#  vagrant: "cd /Users/shaun/Programming/vagrant && vagrant up"
+#  rails_logs: "tail -f /Users/user/Programming/rails_project/log/development.log"
+#  rails_server: "cd /Users/user/Programming/rails_project/ && rails s"
+
