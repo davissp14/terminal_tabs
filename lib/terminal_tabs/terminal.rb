@@ -9,7 +9,6 @@ class Terminal
   def build_executable
     self.file_tabs.each do |filename, hash|
       File.open("#{OUTPUT_PATH}/#{filename}.sh", 'w') do |file|
-        puts "Generating tab: #{filename}"
         file.write(
           %Q[osascript <<-eof
            tell application "Iterm"
@@ -24,7 +23,7 @@ class Terminal
         eof]
         )
         file.chmod(0755)
-        puts "#{Terminal::OUTPUT_PATH}/#{filename} has been created!"
+        puts "#{Terminal::OUTPUT_PATH}/#{filename}.sh has been created!"
       end
     end
   end
