@@ -10,7 +10,7 @@ Terminal tabs makes it super easy to quickly build out your terminal workstation
 
 ## Getting started
       
- Declare your desired executable name and tabs using the tabs.yml file 
+ Declare your desired executable names and tabs using the tabs.yml file 
         
         tabs: 
           rails_project:  # Name of executable 
