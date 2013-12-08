@@ -3,7 +3,7 @@
 Terminal tabs makes it super easy to quickly build out your terminal workstation.
 
 ### Supported Terminals ##
-Currently the only supported terminal is Iterm2.  
+ * Iterm2
 
 ## Installation
       git clone git@github.com:davissp14/terminal_tabs.git
