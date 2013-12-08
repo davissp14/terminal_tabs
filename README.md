@@ -14,16 +14,17 @@ Terminal tabs makes it super easy to quickly build out your terminal workstation
         
         tabs: 
           rails_project:  # Name of executable 
-            rails_logs: "tail -f /Programming/rails_project/log/development.log"  # Format (tab_name: cmd)
-            rails_server: "cd /Programming/rails_project/ && rails s"  # Format (tab_name: cmd)
- 
+            rails_logs: "tail -f /Programming/rails_project/log/development.log"     # Format:  tab_name: cmd 
+            rails_server: "cd /Programming/rails_project/ && rails s"                # Format:  tab_name: cmd 
+            
+            
  Generate an executable thats capable of building out your workstation.
           
         $ ruby bin/generate_excutable.rb
 
- Create an alias in your bash profile that points to the file, or just simply run it.   
+Your executables are generated and placed in directory called 'output_files'.  Continuing with our example, execute the following command to deploy your newly generated tabs. 
  
-        $ ./autorun.sh   
+        $ ./output_files/rails_project.sh   
 
 
 
