@@ -1,2 +1,4 @@
 *.sh
 *.yml
+output_files*
+tabs.yml
