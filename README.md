@@ -10,11 +10,12 @@ Terminal tabs makes it super easy to quickly build out your terminal workstation
 
 ## Getting started
       
- Define your tabs using the tabs.yml file 
+ Declare your desired executable name and tabs using the tabs.yml file 
         
         tabs: 
-          rails_logs: "tail -f /Users/user/Programming/rails_project/log/development.log"
-          rails_server: "cd /Users/user/Programming/rails_project/ && rails s"
+          rails_project:  # Name of executable 
+            rails_logs: "tail -f /Users/user/Programming/rails_project/log/development.log"  # Format (tab_name: cmd)
+            rails_server: "cd /Users/user/Programming/rails_project/ && rails s"             # Format (tab_name: cmd)
  
  Generate an executable thats capable of building out your workstation.
           
@@ -23,6 +24,8 @@ Terminal tabs makes it super easy to quickly build out your terminal workstation
  Create an alias in your bash profile that points to the file, or just simply run it.   
  
         $ ./autorun.sh   
+
+
 
 
 ##License
