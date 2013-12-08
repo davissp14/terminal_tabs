@@ -30,7 +30,7 @@ class Terminal
     source = ''
     self.tabs.each do |tab|
       tab = Tab.new(Hash[*tab])
-      puts "Generating #{tab.name}"
+      puts "Generating tab: #{tab.name}"
       source << tab.build
     end
     source
