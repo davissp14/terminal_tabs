@@ -2,14 +2,8 @@ class Terminal
   attr_accessor :type, :tabs
 
   def initialize
-    load_yml
-
-  rescue NoTasksDetected
-    $stderr.puts("No tabs.yml file detected")
-  rescue TasksFileNotFound
-    $stderr.puts("No tabs detected...")
-  rescue
-    $stderr.puts($!)
+    self.type = nil
+    self.tabs = []
   end
 
   def build_file
@@ -28,6 +22,7 @@ class Terminal
         eof]
       )
       file.chmod(0755)
+      puts "#{Terminal::OUTPUT_FILE} has been created!"
     end
   end
   
@@ -41,15 +36,15 @@ class Terminal
     source
   end
 
-  
-  private
-
   def load_yml
-    yml_contents = YAML.load_file(TASKS_PATH)
-    raise TasksFileNotFound unless yml_contents
-    self.tabs = symbolize_keys!(yml_contents["tabs"] || {})
-    raise NoTasksDetected unless self.tabs
-    self.type = yml_contents["terminal"] || 'iTerm'
+    if File.exists?(TABS_PATH)
+      yml_contents = YAML.load_file(TABS_PATH)
+      self.tabs = symbolize_keys!(yml_contents["tabs"] || {})
+      abort("No tabs found at: #{TABS_PATH}") if self.tabs.empty?
+      self.type = yml_contents["terminal"] || 'iTerm'
+    else
+      abort("#{TABS_PATH} does not exist...")
+    end
   end
   
   def symbolize_keys!(hash)
@@ -57,6 +52,3 @@ class Terminal
     hash.inject({}){|mkey,(k,v)| mkey[k.to_sym] = v; mkey}
   end
 end
-
-class TasksFileNotFound < StandardError; end
-class NoTasksDetected < StandardError; end
