@@ -1,4 +1,4 @@
-require '../lib/terminal_tasks'
+require_relative '../lib/terminal_tasks.rb'
 
 term = Terminal.new
 term.build_file
