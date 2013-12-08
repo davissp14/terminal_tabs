@@ -1,6 +1,6 @@
 terminal: iTerm       # Specify terminal type.  Currently only compatible with iTerm.
 
-tabs: 
+#tabs: 
 #  rails_project:  # Name of executable 
 #    rails_logs: "tail -f /Programming/rails_project/log/development.log"  # Format (tab_name: cmd)
 #    rails_server: "cd /Programming/rails_project/ && rails s"  # Format (tab_name: cmd)
