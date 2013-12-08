@@ -20,7 +20,7 @@ Terminal tabs makes it super easy to quickly build out your terminal workstation
           
         $ ruby bin/generate_excutable.rb
 
- Run the executable
+ Create an alias in your bash profile that points to the file, or just simply run it.   
  
         $ ./autorun.sh   
 
