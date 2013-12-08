@@ -1,10 +1,9 @@
 class Tab
-    attr_accessor :tab, :name, :directive
+    attr_accessor :name, :directive
     
-    def initialize(tab={})
-      self.tab = tab
-      self.name = tab_name.to_s
-      self.directive = tab_directive
+    def initialize(name, directive)
+      self.name = name
+      self.directive = directive
     end
 
     def build
@@ -19,15 +18,5 @@ class Tab
           set name to "#{self.name}"
         end tell
       eof
-    end
-
-    private
-
-    def tab_name
-      self.tab.keys.first
-    end
-
-    def tab_directive
-      self.tab[tab_name]
     end
 end
